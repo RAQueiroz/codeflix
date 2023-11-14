@@ -8,4 +8,6 @@ export abstract class ValueObject {
     // return isEqual(vo, this)
     return JSON.stringify(vo) === JSON.stringify(this)
   }
+
+  abstract toString(): string
 }
