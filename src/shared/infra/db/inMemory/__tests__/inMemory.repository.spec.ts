@@ -44,7 +44,6 @@ describe('InMemoryRepository', () => {
 
   it('inserts a new Entity', async () => {
     const entity = new EntityStub({ name: 'Test', price: 100 }) 
-    
     await repo.insert(entity)
     
     expect(repo.items[0]).toStrictEqual(entity)
