@@ -1,3 +1,4 @@
+import { Nullable } from "../../../types/utils";
 import { Entity } from "../entity";
 import { ValueObject } from "../valueObject";
 import { SearchParams } from "./searchParams";
@@ -9,7 +10,7 @@ export interface Repository<TEntity extends Entity> {
   update(entity: TEntity): Promise<void>
   delete(entityId: ValueObject): Promise<void>
 
-  find(entityId: ValueObject): Promise<TEntity | null>
+  findById(entityId: ValueObject): Promise<Nullable<TEntity>>
   findAll(): Promise<Array<TEntity>>
 
   getEntity(): new (...args: any[]) => TEntity

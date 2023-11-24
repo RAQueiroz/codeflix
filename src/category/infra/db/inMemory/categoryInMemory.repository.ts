@@ -1,6 +1,6 @@
-import { SortDirection } from "../../../shared/domain/repository/searchParams";
-import { SearchableInMemoryRepository } from "../../../shared/infra/db/inMemory/searchableInMemory.repository";
-import { Category } from "../../domain/category.entity";
+import { SortDirection } from "../../../../shared/domain/repository/searchParams";
+import { SearchableInMemoryRepository } from "../../../../shared/infra/db/inMemory/searchableInMemory.repository";
+import { Category } from "../../../domain/category.entity";
 
 export class CategoryInMemoryRepository extends SearchableInMemoryRepository<Category> {
   
